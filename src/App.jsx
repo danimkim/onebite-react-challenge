@@ -12,13 +12,19 @@ function Welcome({ name, isMember }) {
 
 function App() {
   const [hasSignedIn, setHasSignedIn] = useState(false);
+
+  const userInfo = {
+    name: "이정환",
+    isMember: hasSignedIn,
+  };
+
   const handleClick = () => setHasSignedIn((prev) => !prev);
 
   return (
     <>
-      <Welcome name="디아" isMember={hasSignedIn} />
+      <Welcome {...userInfo} />
       <button type="button" onClick={handleClick}>
-        {hasSignedIn ? "로그아웃" : "로그인"}
+        {hasSignedIn ? "로그아웃" : "회원가입"}
       </button>
     </>
   );
