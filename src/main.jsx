@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root.jsx";
 import ErrorPage from "./error-page.jsx";
-import Day10 from "./routes/Day10.jsx";
+import MockAuth from "./routes/MockAuth.jsx";
 import CurrencyConverter from "./routes/CurrencyConverter.jsx";
 import Counter from "./routes/Counter.jsx";
 import "./global.css";
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "day10",
-        element: <Day10 />,
+        element: <MockAuth />,
       },
       {
         path: "day13",

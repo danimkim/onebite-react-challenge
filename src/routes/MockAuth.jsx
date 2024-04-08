@@ -9,7 +9,7 @@ function Welcome({ name, isMember }) {
   );
 }
 
-export default function Day10() {
+export default function MockAuth() {
   const [hasSignedIn, setHasSignedIn] = useState(false);
 
   const userInfo = {
