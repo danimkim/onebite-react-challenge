@@ -9,45 +9,40 @@ import Counter from "./routes/Counter.jsx";
 import "./global.css";
 import { BASE_URL } from "./constants/constant.js";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: BASE_URL,
-      element: <Root />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: `${BASE_URL}/mission`,
-      children: [
-        {
-          path: "day10",
-          element: <MockAuth />,
-        },
-        {
-          path: "day13",
-          element: <CurrencyConverter />,
-        },
-      ],
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: `${BASE_URL}/project`,
-      children: [
-        {
-          path: "counter",
-          element: <Counter />,
-        },
-      ],
-      errorElement: <ErrorPage />,
-    },
-  ],
+const router = createBrowserRouter([
   {
-    basename: `/${BASE_URL}`,
-  }
-);
+    path: BASE_URL,
+    element: <Root />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: `${BASE_URL}/mission`,
+    children: [
+      {
+        path: "day10",
+        element: <MockAuth />,
+      },
+      {
+        path: "day13",
+        element: <CurrencyConverter />,
+      },
+    ],
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: `${BASE_URL}/project`,
+    children: [
+      {
+        path: "counter",
+        element: <Counter />,
+      },
+    ],
+    errorElement: <ErrorPage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} basename="/onebite-react-challenge" />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
