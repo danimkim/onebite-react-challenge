@@ -7,16 +7,16 @@ import MockAuth from "./routes/MockAuth.jsx";
 import CurrencyConverter from "./routes/CurrencyConverter.jsx";
 import Counter from "./routes/Counter.jsx";
 import "./global.css";
+import { BASE_URL } from "./constants/constant.js";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: BASE_URL,
     element: <Root />,
     errorElement: <ErrorPage />,
-    index: true,
   },
   {
-    path: "mission",
+    path: `${BASE_URL}/mission`,
     children: [
       {
         path: "day10",
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "project",
+    path: `/${BASE_URL}/project`,
     children: [
       {
         path: "counter",
