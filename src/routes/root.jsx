@@ -5,10 +5,15 @@ export default function Root() {
       <nav>
         <ul>
           <li>
-            <a href={`/day10`}>Day10</a>
+            <a href={`/mission/day10`}>Day10</a>
           </li>
           <li>
-            <a href={`/day13`}>Day13</a>
+            <a href={`/mission/day13`}>Day13</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/project/counter">Counter App</a>
           </li>
         </ul>
       </nav>
