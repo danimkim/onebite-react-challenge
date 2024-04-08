@@ -26,6 +26,7 @@ const router = createBrowserRouter([
         element: <CurrencyConverter />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
   {
     path: "project",
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
         element: <Counter />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 
