@@ -5,6 +5,7 @@ import Root from "./routes/root.jsx";
 import ErrorPage from "./error-page.jsx";
 import Day10 from "./routes/Day10.jsx";
 import CurrencyCalculator from "./routes/CurrencyCalculator.jsx";
+import Counter from "./routes/Counter.jsx";
 import "./global.css";
 
 const router = createBrowserRouter([
@@ -25,8 +26,15 @@ const router = createBrowserRouter([
         element: <CurrencyCalculator />,
       },
     ],
-    path: "/day10",
-    element: <Day10 />,
+  },
+  {
+    path: "project",
+    children: [
+      {
+        path: "counter",
+        element: <Counter />,
+      },
+    ],
   },
 ]);
 

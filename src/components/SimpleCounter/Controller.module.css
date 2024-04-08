@@ -1,0 +1,26 @@
+.Container {
+  background-color: #fee2e2;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.Button {
+  width: 3rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.2rem;
+  border: solid 1px #e1acac;
+}
+
+.Button:hover {
+  background-color: #e1acac;
+  color: #fff;
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+.Button + button {
+  margin-left: 0.5rem;
+}

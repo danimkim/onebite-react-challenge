@@ -1,0 +1,11 @@
+.Container {
+  background-color: #fee2e2;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.CountNumber {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 1.3rem;
+}
