@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root.jsx";
 import ErrorPage from "./error-page.jsx";
 import Day10 from "./routes/Day10.jsx";
-import CurrencyCalculator from "./routes/CurrencyCalculator.jsx";
+import CurrencyConverter from "./routes/CurrencyConverter.jsx";
 import Counter from "./routes/Counter.jsx";
 import "./global.css";
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "day13",
-        element: <CurrencyCalculator />,
+        element: <CurrencyConverter />,
       },
     ],
   },
