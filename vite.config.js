@@ -4,6 +4,6 @@ import { BASE_URL } from "./src/constants/constant";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: `/${BASE_URL}`,
+  base: `/${BASE_URL}/`,
   plugins: [react()],
 });
