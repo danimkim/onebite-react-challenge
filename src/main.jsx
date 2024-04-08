@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: `/${BASE_URL}/project`,
+    path: `${BASE_URL}/project`,
     children: [
       {
         path: "counter",
@@ -43,6 +43,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} basename="/onebite-react-challenge" />
   </React.StrictMode>
 );
