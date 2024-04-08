@@ -8,15 +8,15 @@ export default function Root() {
       <nav>
         <ul>
           <li>
-            <Link to={`/${BASE_URL}/mission/day10`}>Day10</Link>
+            <Link to={`/mission/day10`}>Day10</Link>
           </li>
           <li>
-            <Link to={`/${BASE_URL}/mission/day13`}>Day13</Link>
+            <Link to={`/mission/day13`}>Day13</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <Link to={`/${BASE_URL}/project/counter`}>Counter App</Link>
+            <Link to={`/project/counter`}>Counter App</Link>
           </li>
         </ul>
       </nav>

@@ -12,7 +12,7 @@ import { BASE_URL } from "./constants/constant.js";
 const router = createBrowserRouter(
   [
     {
-      path: BASE_URL,
+      path: "/",
       element: <Root />,
       errorElement: <ErrorPage />,
     },
