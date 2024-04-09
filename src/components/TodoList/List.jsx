@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import styles from "./List.module.css";
 import ListItem from "./ListItem";
 
-export default function List({ todoData, onUpdate }) {
+export default function List({ todoData, onUpdate, onDelete }) {
   const [searchWord, setSearchWord] = useState("");
 
   const onSearchChange = (e) => {
@@ -31,7 +31,12 @@ export default function List({ todoData, onUpdate }) {
       />
       <ul className={styles.ListContainer}>
         {filteredTodos.map((todo) => (
-          <ListItem key={todo.id} {...todo} onUpdate={onUpdate} />
+          <ListItem
+            key={todo.id}
+            {...todo}
+            onUpdate={onUpdate}
+            onDelete={onDelete}
+          />
         ))}
       </ul>
     </section>

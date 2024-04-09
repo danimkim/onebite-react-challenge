@@ -47,11 +47,15 @@ export default function Todolist() {
     );
   };
 
+  const onDelete = (targetId) => {
+    setTodos(todos.filter((todo) => todo.id !== targetId));
+  };
+
   return (
     <div className={styles.Container}>
       <Header />
       <Editor onCreate={onCreate} />
-      <List todoData={todos} onUpdate={onUpdate} />
+      <List todoData={todos} onUpdate={onUpdate} onDelete={onDelete} />
     </div>
   );
 }
