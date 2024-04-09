@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root.jsx";
+import Root from "./routes/Root.jsx";
 import ErrorPage from "./error-page.jsx";
 import MockAuth from "./routes/MockAuth.jsx";
 import CurrencyConverter from "./routes/CurrencyConverter.jsx";
