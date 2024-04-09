@@ -1,10 +1,36 @@
+import { useRef, useState } from "react";
 import styles from "./Editor.module.css";
 
-export default function Editor() {
+export default function Editor({ onCreate }) {
+  const [content, setContent] = useState("");
+  const inputRef = useRef();
+
+  const onKeydown = (e) => {
+    if (e.keyCode === 13) {
+      onSubmit();
+    }
+  };
+
+  const onSubmit = () => {
+    if (!content) {
+      inputRef.current.focus();
+      return;
+    }
+    onCreate(content);
+    setContent("");
+  };
+
   return (
     <section className={styles.Container}>
-      <input type="text" className={styles.Input} />
-      <button type="button" className={styles.Button}>
+      <input
+        type="text"
+        className={styles.Input}
+        placeholder="Todo를 입력하세요"
+        onChange={(e) => setContent(e.target.value)}
+        ref={inputRef}
+        onKeyDown={onKeydown}
+      />
+      <button type="button" className={styles.Button} onClick={onSubmit}>
         추가
       </button>
     </section>
