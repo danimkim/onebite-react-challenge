@@ -8,6 +8,7 @@ import CurrencyConverter from "./routes/CurrencyConverter.jsx";
 import Counter from "./routes/Counter.jsx";
 import "./global.css";
 import { BASE_URL } from "./constants/constant.js";
+import Todolist from "./routes/Todolist.jsx";
 
 const router = createBrowserRouter(
   [
@@ -36,6 +37,10 @@ const router = createBrowserRouter(
         {
           path: "counter",
           element: <Counter />,
+        },
+        {
+          path: "todolist",
+          element: <Todolist />,
         },
       ],
       errorElement: <ErrorPage />,
