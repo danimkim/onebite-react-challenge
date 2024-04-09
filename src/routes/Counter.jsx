@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Controller from "../components/SimpleCounter/Controller";
 import Viewer from "../components/SimpleCounter/Viewer";
-import styles from "./Counter.module.css";
+import styles from "./../styles/Counter.module.css";
 
 export default function Counter() {
   const [count, setCount] = useState(0);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./CurrencyConverter.module.css";
+import styles from "../styles/CurrencyConverter.module.css";
 import { CURRENCY } from "../constants/constant";
 
 const CurrencyInput = ({ currencyCode, InputChangeHandler, inputValue }) => {
