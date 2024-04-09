@@ -24,3 +24,7 @@
 .DeleteIconImg {
   width: 1.2rem;
 }
+
+.TodoComplete {
+  text-decoration: line-through;
+}

@@ -34,11 +34,24 @@ export default function Todolist() {
     setTodos([newTodo, ...todos]);
   };
 
+  const onUpdate = (targetId) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === targetId
+          ? {
+              ...todo,
+              isDone: !todo.isDone,
+            }
+          : todo
+      )
+    );
+  };
+
   return (
     <div className={styles.Container}>
       <Header />
       <Editor onCreate={onCreate} />
-      <List todoData={todos} />
+      <List todoData={todos} onUpdate={onUpdate} />
     </div>
   );
 }
