@@ -9,6 +9,7 @@
 
 .Content {
   margin-left: 0.5rem;
+  width: 170px;
 }
 
 .Content,
@@ -27,4 +28,9 @@
 
 .TodoComplete {
   text-decoration: line-through;
+}
+
+.TodoCheckboxWrapper {
+  display: flex;
+  align-items: flex-start;
 }

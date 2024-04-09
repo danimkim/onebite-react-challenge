@@ -7,6 +7,7 @@ export default function Editor({ onCreate }) {
 
   const onKeydown = (e) => {
     if (e.keyCode === 13) {
+      setContent("");
       onSubmit();
     }
   };
@@ -29,6 +30,7 @@ export default function Editor({ onCreate }) {
         onChange={(e) => setContent(e.target.value)}
         ref={inputRef}
         onKeyDown={onKeydown}
+        value={content}
       />
       <button type="button" className={styles.Button} onClick={onSubmit}>
         추가

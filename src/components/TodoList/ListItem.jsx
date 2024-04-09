@@ -17,7 +17,7 @@ export default function ListItem({
 
   return (
     <li className={styles.Item}>
-      <div>
+      <div className={styles.TodoCheckboxWrapper}>
         <input type="checkbox" checked={isDone} onChange={() => onUpdate(id)} />
         <span
           className={`${styles.Content} ${isDone ? styles.TodoComplete : ""}`}
