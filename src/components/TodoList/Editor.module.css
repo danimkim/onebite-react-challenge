@@ -1,0 +1,27 @@
+.Container {
+  width: 100%;
+  height: 1.8rem;
+  margin-top: 2rem;
+}
+
+.Input {
+  height: 100%;
+  border: solid 1px #e8ecf3;
+  outline: none;
+  padding-left: 0.5rem;
+  font-weight: 200;
+}
+
+.Input:focus {
+  border: solid 1px #1665c0;
+}
+
+.Button {
+  width: 5rem;
+  height: 100%;
+  margin-left: 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #1665c0;
+  color: #fff;
+}

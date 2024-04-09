@@ -1,0 +1,25 @@
+.Container {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.Heading {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.SearchInput {
+  width: 100%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  border-bottom: solid 1px #e8ecf3;
+  outline: none;
+}
+
+.SearchInput:focus {
+  border-bottom: solid 1px #1665c0;
+}
+
+.ListContainer {
+  margin-top: 1rem;
+}
