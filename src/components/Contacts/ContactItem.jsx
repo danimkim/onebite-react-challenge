@@ -1,11 +1,13 @@
+import { memo } from "react";
 import styles from "./ContactItem.module.css";
 
-export default function ContactItem({ id, name, email, onDelete }) {
+function ContactItem({ id, name, email, onDelete }) {
   const handleButtonClick = (targetId) => {
     if (confirm("정말 삭제하시겠습니까?")) {
       onDelete(targetId);
     }
   };
+
   return (
     <div className={styles.ContactItem}>
       <div className={styles.Name}>{name}</div>
@@ -16,3 +18,5 @@ export default function ContactItem({ id, name, email, onDelete }) {
     </div>
   );
 }
+
+export default memo(ContactItem);

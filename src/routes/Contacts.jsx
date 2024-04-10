@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useCallback, useReducer, useRef } from "react";
 import ContactEditor from "./../components/Contacts/ContactEditor";
 import ContactList from "./../components/Contacts/ContactList";
 import styles from "./../styles/Contacts.module.css";
@@ -23,7 +23,7 @@ export default function Contacts() {
   const [contacts, dispatch] = useReducer(reducer, mockData);
   const idRef = useRef(3);
 
-  const onCreate = ({ name, email }) => {
+  const onCreate = useCallback(({ name, email }) => {
     dispatch({
       type: "CREATE",
       data: {
@@ -32,14 +32,14 @@ export default function Contacts() {
         email,
       },
     });
-  };
+  }, []);
 
-  const onDelete = (targetId) => {
+  const onDelete = useCallback((targetId) => {
     dispatch({
       type: "DELETE",
       targetId,
     });
-  };
+  }, []);
 
   return (
     <div className={styles.Container}>
