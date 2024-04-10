@@ -3,10 +3,13 @@ import styles from "./ContactEditor.module.css";
 
 export default function ContactEditor({ onCreate }) {
   const [contactInput, setContactInput] = useState({ name: "", email: "" });
-  const handleClick = (e) => {
+
+  const onSubmit = (e) => {
     e.preventDefault();
-    onCreate(contactInput);
-    setContactInput({ name: "", email: "" });
+    if (contactInput.name && contactInput.email) {
+      onCreate(contactInput);
+      setContactInput({ name: "", email: "" });
+    }
   };
 
   return (
@@ -14,7 +17,7 @@ export default function ContactEditor({ onCreate }) {
       <div className={styles.Title}>Add Contact</div>
       <form
         className={styles.InputWrapper}
-        onSubmit={handleClick}
+        onSubmit={onSubmit}
         id="contact-form"
       >
         <input
