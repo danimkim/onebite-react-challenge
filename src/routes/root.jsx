@@ -12,6 +12,9 @@ export default function Root() {
           <li>
             <Link to={`/mission/day13`}>Day13 - 환율 변환기</Link>
           </li>
+          <li>
+            <Link to={`/mission/day15`}>Day15 - 연락처</Link>
+          </li>
         </ul>
         <ul>
           <li>

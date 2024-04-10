@@ -9,6 +9,7 @@ import Counter from "./routes/Counter.jsx";
 import "./global.css";
 import { BASE_URL } from "./constants/constant.js";
 import Todolist from "./routes/Todolist.jsx";
+import Contacts from "./routes/Contacts.jsx";
 
 const router = createBrowserRouter(
   [
@@ -27,6 +28,10 @@ const router = createBrowserRouter(
         {
           path: "day13",
           element: <CurrencyConverter />,
+        },
+        {
+          path: "day15",
+          element: <Contacts />,
         },
       ],
       errorElement: <ErrorPage />,
