@@ -1,10 +1,10 @@
 import { useCallback, useContext, useState } from "react";
 import styles from "./List.module.css";
 import ListItem from "./ListItem";
-import { TodoContext } from "../../routes/Todolist";
+import { TodoStateContext } from "./../../context/TodoList";
 
 export default function List() {
-  const { todos: todoData, onUpdate, onDelete } = useContext(TodoContext);
+  const todoData = useContext(TodoStateContext);
   const [searchWord, setSearchWord] = useState("");
 
   const onSearchChange = (e) => {
@@ -33,12 +33,7 @@ export default function List() {
       />
       <ul className={styles.ListContainer}>
         {filteredTodos.map((todo) => (
-          <ListItem
-            key={todo.id}
-            {...todo}
-            onUpdate={onUpdate}
-            onDelete={onDelete}
-          />
+          <ListItem key={todo.id} {...todo} />
         ))}
       </ul>
     </section>
