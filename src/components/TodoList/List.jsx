@@ -1,8 +1,10 @@
-import { useCallback, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import styles from "./List.module.css";
 import ListItem from "./ListItem";
+import { TodoContext } from "../../routes/Todolist";
 
-export default function List({ todoData, onUpdate, onDelete }) {
+export default function List() {
+  const { todos: todoData, onUpdate, onDelete } = useContext(TodoContext);
   const [searchWord, setSearchWord] = useState("");
 
   const onSearchChange = (e) => {

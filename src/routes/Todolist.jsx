@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { createContext, useReducer, useRef } from "react";
 import Editor from "../components/TodoList/Editor";
 import Header from "../components/TodoList/Header";
 import List from "../components/TodoList/List";
@@ -34,6 +34,8 @@ const reducer = (state, action) => {
   }
 };
 
+export const TodoContext = createContext();
+
 export default function Todolist() {
   const [todos, dispatch] = useReducer(reducer, mockData);
   const idRef = useRef(2);
@@ -67,8 +69,10 @@ export default function Todolist() {
   return (
     <div className={styles.Container}>
       <Header />
-      <Editor onCreate={onCreate} />
-      <List todoData={todos} onUpdate={onUpdate} onDelete={onDelete} />
+      <TodoContext.Provider value={{ todos, onCreate, onUpdate, onDelete }}>
+        <Editor />
+        <List todoData={todos} onUpdate={onUpdate} onDelete={onDelete} />
+      </TodoContext.Provider>
     </div>
   );
 }

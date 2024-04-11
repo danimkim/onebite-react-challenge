@@ -1,14 +1,10 @@
 import styles from "./ListItem.module.css";
 import Delete from "./../../assets/delete.svg";
+import { useContext } from "react";
+import { TodoContext } from "../../routes/Todolist";
 
-export default function ListItem({
-  id,
-  isDone,
-  date,
-  content,
-  onUpdate,
-  onDelete,
-}) {
+export default function ListItem({ id, isDone, date, content }) {
+  const { onUpdate, onDelete } = useContext(TodoContext);
   const onDeleteClick = (targetId) => {
     if (confirm("정말 삭제하시겠습니까?")) {
       onDelete(targetId);

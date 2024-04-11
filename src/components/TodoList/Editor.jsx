@@ -1,7 +1,9 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import styles from "./Editor.module.css";
+import { TodoContext } from "../../routes/Todolist";
 
-export default function Editor({ onCreate }) {
+export default function Editor() {
+  const { onCreate } = useContext(TodoContext);
   const [content, setContent] = useState("");
   const inputRef = useRef();
 
