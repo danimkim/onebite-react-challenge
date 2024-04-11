@@ -10,6 +10,9 @@ export default function Root() {
             <Link to={`/mission/day10`}>Day10</Link>
           </li>
           <li>
+            <Link to={`/mission/day11`}>Day11 - 배달 음식 주문 페이지</Link>
+          </li>
+          <li>
             <Link to={`/mission/day13`}>Day13 - 환율 변환기</Link>
           </li>
           <li>

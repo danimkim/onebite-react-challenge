@@ -10,6 +10,7 @@ import "./global.css";
 import { BASE_URL } from "./constants/constant.js";
 import Todolist from "./routes/Todolist.jsx";
 import Contacts from "./routes/Contacts.jsx";
+import FoodOrder from "./routes/FoodOrder.jsx";
 
 const router = createBrowserRouter(
   [
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
         {
           path: "day10",
           element: <MockAuth />,
+        },
+        {
+          path: "day11",
+          element: <FoodOrder />,
         },
         {
           path: "day13",

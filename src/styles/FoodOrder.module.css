@@ -1,0 +1,9 @@
+.Container {
+  padding: 1.5rem;
+  max-width: 390px;
+}
+
+.Title {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
