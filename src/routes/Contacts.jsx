@@ -1,7 +1,11 @@
-import { useCallback, useReducer, useRef } from "react";
+import { useCallback, useMemo, useReducer, useRef } from "react";
 import ContactEditor from "./../components/Contacts/ContactEditor";
 import ContactList from "./../components/Contacts/ContactList";
 import styles from "./../styles/Contacts.module.css";
+import {
+  ContactStateContext,
+  ContactDispatchContext,
+} from "./../context/Contacts";
 
 const mockData = [
   { id: 1, name: "John", email: "johndoe@gmail.com" },
@@ -41,15 +45,21 @@ export default function Contacts() {
     });
   }, []);
 
+  const memoizedDispatch = useMemo(() => ({ onCreate, onDelete }), []);
+
   return (
     <div className={styles.Container}>
       <h1 className={styles.Heading}>Contact List</h1>
-      <section>
-        <ContactEditor onCreate={onCreate} />
-      </section>
-      <section>
-        <ContactList contacts={contacts} onDelete={onDelete} />
-      </section>
+      <ContactStateContext.Provider value={contacts}>
+        <ContactDispatchContext.Provider value={memoizedDispatch}>
+          <section>
+            <ContactEditor />
+          </section>
+          <section>
+            <ContactList />
+          </section>
+        </ContactDispatchContext.Provider>
+      </ContactStateContext.Provider>
     </div>
   );
 }

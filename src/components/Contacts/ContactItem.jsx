@@ -1,7 +1,10 @@
-import { memo } from "react";
+import { memo, useContext } from "react";
 import styles from "./ContactItem.module.css";
+import { ContactDispatchContext } from "./../../context/Contacts";
 
-function ContactItem({ id, name, email, onDelete }) {
+function ContactItem({ id, name, email }) {
+  const { onDelete } = useContext(ContactDispatchContext);
+
   const handleButtonClick = (targetId) => {
     if (confirm("정말 삭제하시겠습니까?")) {
       onDelete(targetId);

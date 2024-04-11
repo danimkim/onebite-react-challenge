@@ -1,8 +1,10 @@
-import { memo, useState } from "react";
+import { memo, useContext, useState } from "react";
 import styles from "./ContactEditor.module.css";
+import { ContactDispatchContext } from "./../../context/Contacts";
 
-function ContactEditor({ onCreate }) {
+function ContactEditor() {
   const [contactInput, setContactInput] = useState({ name: "", email: "" });
+  const { onCreate } = useContext(ContactDispatchContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
